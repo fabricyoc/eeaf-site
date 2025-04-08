@@ -1,15 +1,3 @@
-.cardsModility {
-  width: 100%;
-
-  /* background-color: red; */
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-items: center;
-  gap: 1rem;
-}
-
 .card {
   width: 350px;
   height: 400px;
