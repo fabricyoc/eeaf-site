@@ -1,0 +1,27 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --blue-50: #EBF0FE;
+  --blue-100: #D3DCFD;
+  --blue-200: #A3B6FA;
+  --blue-300: #728FF8;
+  --blue-400: #4269F5;
+  --blue-500: #1142F3;
+  --blue-600: #0A33C7;
+  --blue-700: #082796;
+  --blue-800: #051A66;
+}
+
+body {
+  background-color: var(--blue-50);
+}

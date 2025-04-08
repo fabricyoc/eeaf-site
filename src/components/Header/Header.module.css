@@ -1,0 +1,113 @@
+.cabecalho {
+  min-width: 100%;
+  height: 150px;
+
+  background-color: var(--blue-100);
+  color: var(--blue-500);
+  box-shadow: 0 0 8px var(--blue-500);
+
+  display: flex;
+  /* alinhamento horizontal e vertical */
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* menu sandwich */
+.menu {
+  cursor: pointer;
+  position: absolute;
+  left: 1rem;
+  display: none;
+  z-index: 900;
+}
+
+.linha {
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  width: 2rem;
+  border-radius: 4px;
+  background-color: var(--blue-500);
+}
+
+.cabecalho .logo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.cabecalho p {
+  color: var(--blue-400);
+}
+
+.cabecalho img {
+  width: 120px;
+}
+
+.cabecalho h3 {
+  padding-bottom: 5px;
+}
+
+.navHeader {
+  display: flex;
+
+  font-size: 1.125rem;
+  text-shadow: 0 0 3px var(--blue-200);
+
+  list-style-type: none;
+
+}
+
+.navHeader a {
+  text-decoration: none;
+  padding-inline: 10px;
+  padding-block: 4px;
+
+  transition: background-color 0.5s;
+}
+
+.navHeader a:hover {
+  background-color: var(--blue-200);
+  border-radius: 4px;
+}
+
+
+@media (max-width: 768px) {
+  .cabecalho img {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .navHeader {
+    display: none;
+  }
+
+  .showMenuSandwich{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    height: auto;
+    width: 20rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* padding-left: 5rem; */
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+
+    border-radius: 0 0 4px ;
+
+    z-index: 100;
+
+    background-color: var(--blue-200);
+
+  }
+
+}
