@@ -10,6 +10,9 @@
   /* alinhamento horizontal e vertical */
   justify-content: space-around;
   align-items: center;
+
+  position: fixed;
+  top: 0;
 }
 
 /* menu sandwich */
@@ -65,6 +68,12 @@
   transition: background-color 0.5s;
 }
 
+
+.navHeader a:active {
+  color: var(--blue-800);
+  font-weight: bold;
+}
+
 .navHeader a:hover {
   background-color: var(--blue-200);
   border-radius: 4px;
@@ -84,7 +93,7 @@
     display: none;
   }
 
-  .showMenuSandwich{
+  .showMenuSandwich {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,7 +111,7 @@
     padding-top: 5rem;
     padding-bottom: 1rem;
 
-    border-radius: 0 0 4px ;
+    border-radius: 0 0 4px;
 
     z-index: 100;
 
@@ -110,4 +119,14 @@
 
   }
 
+}
+
+@media (max-width: 320px) {
+  .logo {
+    margin-left: 3rem;
+  }
+
+  .showMenuSandwich {
+    width: 100%;
+  }
 }

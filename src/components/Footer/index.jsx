@@ -5,7 +5,9 @@ function Footer() {
 
   return (
     <footer className={styles.rodape}>
-      Escola Estadual Aristófanes Fernandes {anoAtual} &copy;. Todos os direitos reservados. 
+      <div className={styles.escola}>
+        Escola Estadual Aristófanes Fernandes {anoAtual} &copy;. Todos os direitos reservados.
+      </div>
       <span>Desenvolvido por <a href="https://fabricyoc.github.io/" target="_blank" rel="noopener noreferrer">Fabricyo</a>.</span>
     </footer>
   );

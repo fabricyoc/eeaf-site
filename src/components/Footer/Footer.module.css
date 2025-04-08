@@ -33,14 +33,23 @@
   color: var(--blue-500);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 972px) {
   .rodape {
     text-align: center;
   }
 
-  .rodape span{
+  .rodape span {
     font-size: 10px;
     bottom: 2px;
     right: 5px;
+
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 551px) {
+  .escola {
+    padding-bottom: 8px;
   }
 }

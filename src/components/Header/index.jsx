@@ -35,7 +35,7 @@ function Header() {
         <a href="#" rel="noopener noreferrer">Projetos</a>
         <a href="#" rel="noopener noreferrer">Arquivos</a>
         <a href="#" rel="noopener noreferrer">Contatos</a>
-        <a href="#" rel="noopener noreferrer">Login</a>
+        {/* <a href="#" rel="noopener noreferrer">Login</a> */}
       </nav>
     </header>
   );
