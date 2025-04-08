@@ -1,6 +1,6 @@
 import styles from "./Header.module.css";
-import logo from "../../../public/logo.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
 
@@ -19,7 +19,7 @@ function Header() {
       </div>
 
       <section className={styles.logo}>
-        <img src={logo} alt="Imagem indisponível" />
+        <img src='/logo.png' alt="Imagem indisponível" />
         <span>
           <h3>EE Aristófanes Fernandes</h3>
           <p>São Vicente, RN</p>
@@ -30,7 +30,8 @@ function Header() {
         className={`${styles.navHeader} ${showMenu ? styles.showMenuSandwich : ''}`}
         onClick={toggleMenu}
       >
-        <a href="#" rel="noopener noreferrer">Sobre</a>
+        {/* <a href="#" rel="noopener noreferrer">Sobre</a> */}
+        <Link to='/'>Sobre</Link>
         <a href="#" rel="noopener noreferrer">Modalidades</a>
         <a href="#" rel="noopener noreferrer">Projetos</a>
         <a href="#" rel="noopener noreferrer">Arquivos</a>

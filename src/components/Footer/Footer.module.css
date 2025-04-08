@@ -11,7 +11,7 @@
   color: var(--blue-500);
   font-weight: bold;
 
-  position: absolute;
+  position: fixed;
   bottom: 0;
 
   box-shadow: 0 0 8px var(--blue-500);
@@ -51,5 +51,11 @@
 @media (max-width: 551px) {
   .escola {
     padding-bottom: 8px;
+  }
+}
+
+@media (max-width: 278px) {
+  .rodape{
+    font-size: 12px;
   }
 }

@@ -61,6 +61,7 @@
 }
 
 .navHeader a {
+  color: var(--blue-500);
   text-decoration: none;
   padding-inline: 10px;
   padding-block: 4px;
@@ -70,7 +71,7 @@
 
 
 .navHeader a:active {
-  color: var(--blue-800);
+  color: var(--blue-600);
   font-weight: bold;
 }
 
@@ -81,6 +82,10 @@
 
 
 @media (max-width: 768px) {
+  .cabecalho{
+    height: 80px;
+  }
+
   .cabecalho img {
     display: none;
   }
