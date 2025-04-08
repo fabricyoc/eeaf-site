@@ -1,6 +1,9 @@
+import ModalityCards from '../../components/ModalityCards';
 import styles from './Home.module.css';
 
 function Home() {
+
+
   return (
     <section className={styles.home}>
       <h2>Sobre a História da EEAF</h2>
@@ -25,7 +28,8 @@ function Home() {
         </p>
       </div>
 
-      <h2>Modalidades</h2>
+      <h2>Modalidades de Ensino</h2>
+      <ModalityCards />
     </section>
   );
 }

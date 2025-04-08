@@ -1,7 +1,8 @@
 .container {
   margin-top: 150px;
   margin-bottom: 60px;
-  padding: 1.5rem;
+  padding-inline: 1.5rem;
+  padding-block: 1.5rem 3rem;
 
   width: 100%;
 
