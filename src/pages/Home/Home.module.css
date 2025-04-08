@@ -17,18 +17,6 @@
   gap: 1rem;
 }
 
-.cards {
-  width: 100%;
-
-  /* background-color: red; */
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-items: center;
-  gap: 1rem;
-}
-
 @media (max-width: 196px) {
   .home .paragrafos {
     font-size: 12px;

@@ -1,6 +1,6 @@
-import Card from '../../components/Card';
+import CardsModalities from '../../components/CardsModalities';
 import styles from './Home.module.css';
-import modalidades from './modalidades.json';
+import projetos from './projetos.json';
 
 function Home() {
 
@@ -30,19 +30,10 @@ function Home() {
       </div>
 
       <h2>Modalidades de Ensino</h2>
-      <section className={styles.cards}>
-        {
-          modalidades.map(m =>
-            <Card
-              modalidade={m.modalidade}
-              img={m.img}
-              descricao={m.descricao}
-              key={m.modalidade}
-            />
-          )
-        }
-      </section>
+      <CardsModalities />
+
       <h2>Projetos em Desenvolvimento</h2>
+      
     </section>
   );
 }
