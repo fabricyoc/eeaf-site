@@ -18,6 +18,9 @@
 }
 
 .rodape span {
+  display: flex;
+  gap: 3px;
+
   position: absolute;
   right: 10px;
   color: var(--blue-300);
@@ -34,22 +37,18 @@
 }
 
 @media (max-width: 972px) {
-  .rodape {
-    text-align: center;
-  }
-
   .rodape span {
     font-size: 10px;
     bottom: 2px;
-    right: 5px;
-
-    display: block;
+    display: flex;
+    justify-content: center;
     width: 100%;
   }
 }
 
 @media (max-width: 551px) {
   .escola {
+    text-align: center;
     padding-bottom: 8px;
   }
 }

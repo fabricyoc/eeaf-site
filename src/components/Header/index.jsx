@@ -19,24 +19,24 @@ function Header() {
       </div>
 
       <section className={styles.logo}>
-        <img src='/logo.png' alt="Imagem indisponível" />
-        <span>
-          <h3>EE Aristófanes Fernandes</h3>
-          <p>São Vicente, RN</p>
-        </span>
+        <Link to='/'>
+          <img src='/logo.png' alt="Imagem indisponível" />
+          <span>
+            <h3>EE Aristófanes Fernandes</h3>
+            <p>São Vicente, RN</p>
+          </span>
+        </Link>
       </section>
 
       <nav
         className={`${styles.navHeader} ${showMenu ? styles.showMenuSandwich : ''}`}
         onClick={toggleMenu}
       >
-        {/* <a href="#" rel="noopener noreferrer">Sobre</a> */}
-        <Link to='/'>Sobre</Link>
-        <a href="#" rel="noopener noreferrer">Modalidades</a>
-        <a href="#" rel="noopener noreferrer">Projetos</a>
-        <a href="#" rel="noopener noreferrer">Arquivos</a>
-        <a href="#" rel="noopener noreferrer">Contatos</a>
-        {/* <a href="#" rel="noopener noreferrer">Login</a> */}
+        <Link to='/'>Início</Link>
+        <Link to='/arquivos'>Arquivos</Link>
+        {/* <a href="#" rel="noopener noreferrer">Contatos</a> */}
+        <Link to='/contatos'>Contatos</Link>
+        <a href="#" rel="noopener noreferrer">Login</a>
       </nav>
     </header>
   );
