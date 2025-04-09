@@ -1,5 +1,6 @@
 import CardsModalities from '../../components/CardsModalities';
 import CardsProjects from '../../components/CardsProjects';
+import ScrollToTopButton from '../../components/ScrollToTopButton';
 import styles from './Home.module.css';
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
 
   return (
     <section className={styles.home}>
+      <ScrollToTopButton/>
       <h2>Sobre a História da EEAF</h2>
       <div className={styles.paragrafos}>
         <p>
