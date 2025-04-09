@@ -1,0 +1,83 @@
+.cardsProjects {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cardProject {
+  width: 90%;
+  height: 150px;
+
+  display: flex;
+  justify-items: center;
+  align-items: center;
+
+  background-color: var(--blue-200);
+  border-radius: 10px;
+}
+
+.cardProject>.imgCardProject {
+  width: 120px;
+  height: 120px;
+}
+
+.cardProject>.conteudoCardProject {
+  /* background-color: red; */
+  height: 120px;
+  width: 90%;
+  padding: 10px;
+}
+
+.descricaoCardProject {
+  height: 75%;
+  overflow: auto;
+}
+
+.descricaoCardProject::-webkit-scrollbar {
+  width: 12px;
+}
+
+.descricaoCardProject::-webkit-scrollbar-track {
+  background-color: var(--blue-400);
+  border-radius: 20px;
+}
+
+.descricaoCardProject::-webkit-scrollbar-thumb {
+  background-color: var(--blue-200);
+  border-radius: 20px;
+  border: 2px solid var(--blue-400);
+}
+
+.conteudoCardProject>h2 {
+  text-align: center;
+  text-transform: capitalize;
+
+  padding-bottom: 4px;
+}
+
+.conteudoCardProject>p {
+  font-size: 1.125rem;
+  text-align: justify;
+}
+
+@media (max-width: 617px) {
+  .cardProject>.imgCardProject {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 378px) {
+  .cardProject>.imgCardProject {
+    display: none;
+  }
+
+  .cardProject>.conteudoCardProject{
+    width: 90%;
+    margin: auto;
+  }
+}

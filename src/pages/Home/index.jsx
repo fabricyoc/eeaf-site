@@ -1,6 +1,6 @@
 import CardsModalities from '../../components/CardsModalities';
+import CardsProjects from '../../components/CardsProjects';
 import styles from './Home.module.css';
-import projetos from './projetos.json';
 
 function Home() {
 
@@ -33,6 +33,7 @@ function Home() {
       <CardsModalities />
 
       <h2>Projetos em Desenvolvimento</h2>
+      <CardsProjects />
       
     </section>
   );
