@@ -1,0 +1,8 @@
+.arquivos{
+  color: var(--blue-500);
+}
+
+.arquivos > h2{
+  text-align: center;
+  padding-block: 1.5rem;
+}

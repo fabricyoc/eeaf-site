@@ -8,7 +8,7 @@ function Home() {
 
   return (
     <section className={styles.home}>
-      <ScrollToTopButton/>
+      <ScrollToTopButton />
       <h2>Sobre a História da EEAF</h2>
       <div className={styles.paragrafos}>
         <p>
@@ -36,7 +36,7 @@ function Home() {
 
       <h2>Projetos em Desenvolvimento</h2>
       <CardsProjects />
-      
+
     </section>
   );
 }
