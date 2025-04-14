@@ -33,6 +33,13 @@
   width: 650px;
   height: 350px;
   border: none;
-  border-radius: 4px;
-  box-shadow: 2px 2px 5px var(--blue-300);
+  border-radius: 6px;
+  box-shadow: 2px 2px 10px var(--blue-300);
+}
+
+@media (max-width: 305px){
+  .info>.localizacao{
+    width: 100%;
+    height: auto;
+  }
 }
