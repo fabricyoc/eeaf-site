@@ -16,6 +16,7 @@ function AppRoutes() {
           <Route path="/arquivos" element={<Arquivos />} />
           <Route path="/contatos" element={<Contatos />} />
           <Route path="/eventos" element={<Eventos />} />
+          <Route path="/eventos/:year" element={<Eventos />} />
         </Route>
       </Routes>
     </BrowserRouter>

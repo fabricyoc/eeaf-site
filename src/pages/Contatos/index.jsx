@@ -1,7 +1,4 @@
 import styles from './Contatos.module.css';
-import { BsFillTelephoneFill } from "react-icons/bs";
-
-
 
 function Contatos() {
 

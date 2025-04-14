@@ -1,0 +1,8 @@
+.eventos{
+  color: var(--blue-500);
+}
+
+.eventos h2 {
+  text-align: center;
+  padding-block: 1.5rem 1rem;
+}
