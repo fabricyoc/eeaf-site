@@ -18,8 +18,8 @@ function CardsProjects() {
 
             <article className={styles.conteudoCardProject}>
               <h2>{p.titulo}</h2>
-              <p className={styles.descricaoCardProject}>
-                {p.descricao}
+              <p className={styles.descricaoCardProject} dangerouslySetInnerHTML={{ __html: p.descricao }}>
+                {/* {p.descricao} */}
               </p>
             </article>
           </section>

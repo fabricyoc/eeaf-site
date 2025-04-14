@@ -73,7 +73,6 @@
   transition: background-color 0.5s;
 }
 
-
 .navHeader a:active {
   color: var(--blue-600);
   font-weight: bold;
@@ -120,11 +119,12 @@
     padding-top: 5rem;
     padding-bottom: 1rem;
 
-    border-radius: 0 0 4px;
-
+    
     z-index: 100;
-
+    
     background-color: var(--blue-200);
+    border-radius: 0 0 4px;
+    box-shadow: 1px 2px 10px var(--blue-800);
 
   }
 

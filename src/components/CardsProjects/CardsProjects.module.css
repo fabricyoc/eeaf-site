@@ -32,6 +32,20 @@
   padding: 10px;
 }
 
+.descricaoCardProject>a {
+  padding-top: 4px;
+  animation: underline-running 3s ease infinite;
+  padding-inline: 4px;
+}
+
+@keyframes underline-running {
+  to {
+    font-weight: bold;
+    color: var(--blue-700);
+    letter-spacing: 2px;
+  }
+}
+
 .descricaoCardProject {
   height: 75%;
   overflow: auto;
@@ -76,7 +90,7 @@
     display: none;
   }
 
-  .cardProject>.conteudoCardProject{
+  .cardProject>.conteudoCardProject {
     width: 90%;
     margin: auto;
   }
