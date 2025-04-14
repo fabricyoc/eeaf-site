@@ -32,11 +32,11 @@ function Eventos() {
       <h2 className={styles.title2}>{heading()}</h2>
       {buttonBack()}
       {
-        Object.entries(params).length === 0 ?
+        year === 0 ?
           <CardsEvents />
           :
           // <h3>Aqui será exibido os eventos do ano de {year}</h3>
-          <Events />
+          <Events year={year} />
       }
     </section>
   );
