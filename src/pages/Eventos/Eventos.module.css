@@ -2,7 +2,30 @@
   color: var(--blue-500);
 }
 
-.eventos h2 {
+.eventos > .title2 {
   text-align: center;
   padding-block: 1.5rem 1rem;
+}
+
+.eventos > .buttonBack{
+  width: 200px;
+  padding: 1rem;
+  
+  margin-inline: auto;
+
+  background-color: var(--blue-400);
+  color: #f4f4f4;
+  border-radius: 4px;
+  
+  font-size: 1.125rem;
+  font-weight: bold;
+
+  transition: all .5s;
+  
+  margin-bottom: 1.5rem;
+}
+
+.eventos > .buttonBack:hover{
+  background-color: var(--blue-300);
+  box-shadow: 0 0 5px var(--blue-700);
 }

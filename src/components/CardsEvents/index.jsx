@@ -18,7 +18,6 @@ function CardEvent() {
             className={styles.cardEvent}
           >
             <h2>{yearEvent}</h2>
-
           </Link>
         )
       }

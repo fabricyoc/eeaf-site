@@ -9,12 +9,14 @@
 }
 
 /* card of only one event */
-.cardEvent {
+.cardsEvents > .cardEvent {
   width: 250px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding-block: 1rem;
 
   background-color: var(--blue-200);
   border-radius: 4px;
