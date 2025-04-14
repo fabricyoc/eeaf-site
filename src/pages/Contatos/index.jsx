@@ -1,21 +1,33 @@
 import styles from './Contatos.module.css';
-import { FaInstagram, FaFacebookSquare } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
 
 
 
 function Contatos() {
+
+  const clipboard = () => {
+    navigator.clipboard.writeText("8434360991");
+    alert("Número copiado para área de transferência!");
+  }
 
   return (
     <section className={styles.contatos}>
 
       <h2>Contatos</h2>
       <div className={styles.info}>
-        <BsFillTelephoneFill
-        />
-        <MdEmail
-        />
+        <a
+          href=""
+          onClick={clipboard}
+        >
+          <img src="/imagens/icon-telephone.png" alt="icon-telephone.png" />
+        </a>
+        <a
+          href="https://mail.google.com/mail/?view=cm&to=eeafernandez@gmail.com&su=Contato%20via%20EEAF%20Tech"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/imagens/icon-mail.png" alt="Ícone indisponível" />
+        </a>
       </div>
 
       <h2>Redes Sociais</h2>
@@ -25,14 +37,14 @@ function Contatos() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          <img src="/imagens/logo-instagram.png" alt="logo-instagram" />
+          <img src="/imagens/icon-instagram.png" alt="Ícone indisponível" />
         </a>
         <a
           href="https://www.facebook.com/aristofanes.fernandes.9"
           target='_blank'
           rel='noopener noreferrer'
         >
-          <img src="/imagens/logo-facebook.png" alt="logo-facebook" />
+          <img src="/imagens/icon-facebook.png" alt="icon-facebook" />
         </a>
       </div>
 
