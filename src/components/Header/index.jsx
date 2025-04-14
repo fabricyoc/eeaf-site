@@ -35,8 +35,8 @@ function Header() {
         <Link to='/'>Início</Link>
         <Link to='/arquivos'>Arquivos</Link>
         {/* <a href="#" rel="noopener noreferrer">Contatos</a> */}
+        <Link to='/eventos'>Eventos</Link>
         <Link to='/contatos'>Contatos</Link>
-        <a href="#" rel="noopener noreferrer">Login</a>
       </nav>
     </header>
   );
