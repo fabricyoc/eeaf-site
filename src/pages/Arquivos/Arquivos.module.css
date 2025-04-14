@@ -1,8 +1,19 @@
-.arquivos{
+.arquivos {
   color: var(--blue-500);
 }
 
-.arquivos > h2{
+.arquivos>h2 {
   text-align: center;
   padding-block: 1.5rem;
+}
+
+.arquivos>.scroll {
+  display: none;
+
+}
+
+@media (max-width: 863px) {
+  .arquivos>.scroll {
+    display: block;
+  }
 }
