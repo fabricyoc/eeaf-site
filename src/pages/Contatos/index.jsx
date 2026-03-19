@@ -2,10 +2,10 @@ import styles from './Contatos.module.css';
 
 function Contatos() {
 
-  const clipboard = () => {
-    navigator.clipboard.writeText("8434360991");
-    alert("Número copiado para área de transferência!");
-  }
+  // const clipboard = () => {
+  //   navigator.clipboard.writeText("8434360991");
+  //   alert("Número copiado para área de transferência!");
+  // }
 
   return (
     <section className={styles.contatos}>
@@ -13,26 +13,18 @@ function Contatos() {
       <h2>Contatos</h2>
       <div className={styles.info}>
         <a
-          href=""
-          onClick={clipboard}
-        >
-          <img src="/imagens/icon-telephone.png" alt="icon-telephone.png" />
-        </a>
-        <a
-          href="https://mail.google.com/mail/?view=cm&to=eeafernandez@gmail.com&su=Contato%20via%20EEAF%20Tech"
+          href="https://mail.google.com/mail/?view=cm&to=eearistofanesfernandes@educar.rn.gov.br&su=Contato%20via%20EEAF%20Tech"
           target="_blank"
           rel="noopener noreferrer"
+          title="Enviar e-mail para EEAF..."
         >
           <img src="/imagens/icon-mail.png" alt="Ícone indisponível" />
         </a>
-      </div>
-
-      <h2>Redes Sociais</h2>
-      <div className={styles.info}>
         <a
           href="https://www.instagram.com/e.e.aristofanes_fernandes/"
           target='_blank'
           rel='noopener noreferrer'
+          title='Acessar instagram do EEAF...'
         >
           <img src="/imagens/icon-instagram.png" alt="Ícone indisponível" />
         </a>
@@ -40,6 +32,7 @@ function Contatos() {
           href="https://www.facebook.com/aristofanes.fernandes.9"
           target='_blank'
           rel='noopener noreferrer'
+          title='Acessar facebook do EEAF...'
         >
           <img src="/imagens/icon-facebook.png" alt="icon-facebook" />
         </a>

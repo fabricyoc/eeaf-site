@@ -37,6 +37,7 @@ function Header() {
         {/* <a href="#" rel="noopener noreferrer">Contatos</a> */}
         <Link to='/eventos'>Eventos</Link>
         <Link to='/contatos'>Contatos</Link>
+        <Link to='/login'>Login</Link>
       </nav>
     </header>
   );

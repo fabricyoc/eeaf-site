@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Arquivos from "./pages/Arquivos";
 import Contatos from "./pages/Contatos";
 import Eventos from "./pages/Eventos";
+import Login from "./pages/Login";
 
 
 function AppRoutes() {
@@ -17,6 +18,7 @@ function AppRoutes() {
           <Route path="/contatos" element={<Contatos />} />
           <Route path="/eventos" element={<Eventos />} />
           <Route path="/eventos/:year" element={<Eventos />} />
+          <Route path="/login" element={<Login />} />
         </Route>
       </Routes>
     </BrowserRouter>

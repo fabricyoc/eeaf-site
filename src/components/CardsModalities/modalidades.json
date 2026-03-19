@@ -1,17 +1,17 @@
 [
   {
     "modalidade": "Ensino Fundamental",
-    "img": "modalidades/ensino-fundamental.jpeg",
+    "img": "modalidades/ensino-fundamental.png",
     "descricao": "O Ensino Fundamental II abrange estudantes do 6º ao 9º ano e é uma fase essencial para a vida em sociedade."
   },
   {
     "modalidade": "Ensino Médio Regular",
-    "img": "modalidades/ensino-medio-regular.jpeg",
+    "img": "modalidades/ensino-medio-regular.png",
     "descricao": "O Ensino Médio Regular é a modalidade mais conhecida de ensino. Nessa etapa intensifica-se o conhecimento de base."
   },
   {
     "modalidade": "Ensino Médio Técnico",
-    "img": "modalidades/ensino-medio-tecnico.jpeg",
+    "img": "modalidades/ensino-medio-tecnico.png",
     "descricao": "O Ensino Técnico em Informática é uma modalidade profissionalizante integrada ao ensino médio."
   }
 ]
