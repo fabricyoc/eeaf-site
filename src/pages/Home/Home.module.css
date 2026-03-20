@@ -1,8 +1,10 @@
 .home {
   color: var(--blue-500);
+  max-width: 90%;
+  margin: auto;
 }
 
-.home > h2 {
+.home>h2 {
   text-align: center;
   padding-block: 1.5rem;
 }

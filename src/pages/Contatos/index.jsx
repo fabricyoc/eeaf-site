@@ -47,7 +47,11 @@ function Contatos() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
+      </div>
 
+      <h2>Desenvolvedor</h2>
+      <div className={styles.dev}>
+        Olá! Eu sou&nbsp;<strong>Fabricyo</strong>. Clique&nbsp;<a href="https://fabricyoc.github.io/" rel='noopener noreferrer' target='_blank'>aqui</a>&nbsp;para me conhecer!
       </div>
 
     </section>

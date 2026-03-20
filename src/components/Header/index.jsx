@@ -6,7 +6,7 @@ function Header() {
 
   const [showMenu, setshowMenu] = useState(false);
   const toggleMenu = () => setshowMenu(!showMenu);
-
+  const closeMenu = () => setshowMenu(false);
   return (
     <header className={styles.cabecalho}>
       <div
@@ -28,16 +28,14 @@ function Header() {
         </Link>
       </section>
 
-      <nav
-        className={`${styles.navHeader} ${showMenu ? styles.showMenuSandwich : ''}`}
-        onClick={toggleMenu}
-      >
-        <Link to='/'>Início</Link>
-        <Link to='/arquivos'>Arquivos</Link>
-        {/* <a href="#" rel="noopener noreferrer">Contatos</a> */}
-        <Link to='/eventos'>Eventos</Link>
-        <Link to='/contatos'>Contatos</Link>
-        <Link to='/login'>Login</Link>
+      {showMenu && <div className={styles.overlay} onClick={toggleMenu}></div>}
+
+      <nav className={`${styles.navHeader} ${showMenu ? styles.showMenuSandwich : ''}`}>
+        <Link to='/' onClick={closeMenu}>Início</Link>
+        <Link to='/arquivos' onClick={closeMenu}>Arquivos</Link>
+        <Link to='/eventos' onClick={closeMenu}>Eventos</Link>
+        <Link to='/contatos' onClick={closeMenu}>Contatos</Link>
+        <Link to='/login' onClick={closeMenu}>Login</Link>
       </nav>
     </header>
   );
