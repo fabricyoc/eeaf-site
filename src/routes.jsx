@@ -15,11 +15,11 @@ function AppRoutes() {
         {/* rotas aninhadas */}
         <Route path="/" element={<PaginaBase />}>
           <Route index element={<Home />} />
-          <Route path="/arquivos" element={<Arquivos />} />
-          <Route path="/contatos" element={<Contatos />} />
-          <Route path="/eventos" element={<Eventos />} />
-          <Route path="/eventos/:year" element={<Eventos />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="arquivos" element={<Arquivos />} />
+          <Route path="contatos" element={<Contatos />} />
+          <Route path="eventos" element={<Eventos />} />
+          <Route path="eventos/:year" element={<Eventos />} />
+          <Route path="login" element={<Login />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
