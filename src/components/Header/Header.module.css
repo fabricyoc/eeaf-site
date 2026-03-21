@@ -1,5 +1,5 @@
-.cabecalho {
-  min-width: 100%;
+.header {
+  width: 100%;
   height: 130px;
 
   background-color: var(--blue-100);
@@ -7,18 +7,16 @@
   box-shadow: 0 0 8px var(--blue-500);
 
   display: flex;
-  /* alinhamento horizontal e vertical */
   justify-content: space-around;
   align-items: center;
 
   position: fixed;
   top: 0;
-
   z-index: 850;
 }
 
-/* menu sandwich */
-.menu {
+/* botão hamburger */
+.menuToggle {
   cursor: pointer;
   position: absolute;
   left: 1rem;
@@ -26,121 +24,129 @@
   z-index: 1100;
 }
 
-.linha {
-  padding-bottom: 4px;
-  margin-bottom: 4px;
+.bar {
   width: 2rem;
+  height: 4px;
+  margin-bottom: 4px;
   border-radius: 4px;
   background-color: var(--blue-500);
+  transition: all 0.3s ease;
 }
 
-.cabecalho .logo,
-a {
+/* animação X */
+.menuToggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menuToggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menuToggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* logo */
+.header .logo,
+.header a {
   display: flex;
   align-items: center;
-
-  text-align: center;
   text-decoration: none;
   color: var(--blue-500);
 }
 
-
-.cabecalho p {
-  color: var(--blue-400);
-}
-
-.cabecalho img {
+.header img {
   width: 100px;
 }
 
-.cabecalho h3 {
-  padding-bottom: 5px;
+.header p {
+  color: var(--blue-400);
 }
 
-.navHeader {
+/* menu desktop */
+.nav {
   display: flex;
-
   font-size: 1.125rem;
-  text-shadow: 0 0 3px var(--blue-200);
-
-  list-style-type: none;
-
+  list-style: none;
 }
 
-.navHeader a {
-  color: var(--blue-500);
-  text-decoration: none;
-  padding-inline: 10px;
-  padding-block: 4px;
-
-  transition: background-color 0.5s;
+.nav a {
+  padding: 6px 10px;
+  transition: 0.3s;
 }
 
-.navHeader a:active {
-  color: var(--blue-600);
-  font-weight: bold;
-}
-
-.navHeader a:hover {
-  background-color: var(--blue-200);
+.nav a:hover {
+  background-color: var(--blue-400);
+  color: var(--blue-100);
   border-radius: 4px;
 }
 
-
+/* MOBILE */
 @media (max-width: 768px) {
-  .cabecalho {
+
+  .header {
     height: 80px;
   }
 
-  .cabecalho img {
+  .header img {
     display: none;
   }
 
-  .menu {
+  .menuToggle {
     display: block;
   }
 
-  .navHeader {
+  .nav {
     display: none;
   }
 
-  .showMenuSandwich {
+  /* sidebar */
+  .sidebarOpen {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
 
     position: fixed;
     top: 0;
     left: 0;
 
     width: 250px;
-    /* <-- aqui está o que você quer */
     height: 100vh;
 
     padding-top: 5rem;
 
     background-color: var(--blue-200);
-
     z-index: 1000;
-    /* acima do overlay */
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
 
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
   }
 
+  /* 🔥 HOVER NA SIDEBAR */
+  .sidebarOpen a {
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+
+  .sidebarOpen a:hover {
+    background-color: var(--blue-400);
+    transform: scale(1.05);
+  }
+
+  /* overlay */
   .overlay {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 900;
 
     width: 100%;
     height: 100vh;
 
     background: rgba(0, 0, 0, 0.3);
-    /* escurece levemente */
     backdrop-filter: blur(6px);
-    /* <-- DESFOQUE */
 
     z-index: 900;
   }
@@ -151,7 +157,7 @@ a {
     margin-left: 3rem;
   }
 
-  .showMenuSandwich {
+  .sidebarOpen {
     width: 100%;
   }
 }
