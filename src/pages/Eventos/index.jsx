@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import CardsEvents from '../../components/CardsEvents';
 import styles from './Eventos.module.css'
 import Events from '../../components/Events';
+import events from './eventos.json';
 
 function Eventos() {
   // React Route Dom exige para receber os parâmetros
@@ -26,6 +27,8 @@ function Eventos() {
       </Link>;
   }
 
+  // todos os anos dos eventos de forma única e decrescente
+  const anos = [...new Set(events.map(item => item.event_year))].sort((a, b) => b - a);
 
   return (
     <section className={styles.eventos}>
@@ -33,10 +36,10 @@ function Eventos() {
       {buttonBack()}
       {
         year === 0 ?
-          <CardsEvents />
+          <CardsEvents years={anos} />
           :
           // <h3>Aqui será exibido os eventos do ano de {year}</h3>
-          <Events year={year} />
+          <Events year={year} events={events} />
       }
     </section>
   );

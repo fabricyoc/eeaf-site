@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import styles from './Events.module.css';
+import EventVideo from '../EventVideo';
+import EventFiles from '../EventFiles';
 
-function Events({ year }) {
+function Events({ year, events }) {
   const [status, setStatus] = useState(false);
 
   const toggleStatus = () => {
     setStatus(!status);
-    console.log(status);
+    // console.log(status);
   };
 
   const checkIcon = () => {
@@ -35,34 +37,14 @@ function Events({ year }) {
         className={styles.title2}
         onClick={toggleStatus}
       >
+        {/* nome do evento */}
         Aula da Saudade
         {checkIcon()}
       </h2>
       <div className={`${styles.content} ${status ? styles.active : ''}`}>
         <section className={styles.listContent}>
-        <div className={styles.video}>
-            <h4>Título do Vídeo</h4>
-            <iframe
-              src="https://player.vimeo.com/video/1040495493?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              title="2024 Aula da saudade - Entrada">
-            </iframe>
-          </div>
-
-          <div className={styles.contentFiles}>
-            <h4>Links</h4>
-            <section className={styles.files}>
-              <a href="#">Text 1</a>
-              <a href="#">Text 2</a>
-              <a href="#">Text 3</a>
-              <a href="#">Text 4</a>
-              <a href="#">Text 5</a>
-              <a href="#">Text 5</a>
-              <a href="#">Text 5</a>
-              <a href="#">Text 5</a>
-              <a href="#">Text 5</a>
-            </section>
-          </div>
+          <EventVideo nameVideo="teste" />
+          <EventFiles files={events} year={year} />
         </section>
       </div>
 

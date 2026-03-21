@@ -1,0 +1,16 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.video iframe {
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 0 8px var(--blue-600);
+
+  width: 280px;
+  height: 158px;
+}
