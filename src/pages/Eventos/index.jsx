@@ -1,46 +1,58 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, Navigate } from 'react-router-dom';
 import CardsEvents from '../../components/CardsEvents';
 import styles from './Eventos.module.css'
 import Events from '../../components/Events';
 import events from './eventos.json';
 
 function Eventos() {
-  // React Route Dom exige para receber os parâmetros
+
   const params = useParams();
 
-  // todos os anos dos eventos de forma única e decrescente
-  const anos = [...new Set(events.map(item => item.event_year))].sort((a, b) => b - a);
+  const anos = [...new Set(events.map(item => item.event_year))]
+    .sort((a, b) => b - a);
 
-  // const year = params.year;
-  // console.log("Value of params:", year);
-  const year = Object.entries(params).length === 0 ? 0 : params.year;
+  const year = params.year ? Number(params.year) : 0;
+
+  const hasEvents = (year) => {
+    return events.some(item =>
+      item.event_year === Number(year) &&
+      (item.files?.length || item.videos?.length)
+    );
+  };
+
+  // proteção de rota
+  if (year !== 0 && !hasEvents(year)) {
+    return <Navigate to="/eventos" replace />;
+  }
 
   let heading = () => {
     return year === 0 ? "Eventos" : `Eventos de ${year}`;
   };
 
   let buttonBack = () => {
-    return year === 0 ?
-      '' :
+    return year === 0 ? '' : (
       <Link
         className={styles.buttonBack}
         to='/eventos'
       >
         Voltar aos eventos?
-      </Link>;
-  }
+      </Link>
+    );
+  };
 
   return (
     <section className={styles.eventos}>
       <h2 className={styles.title2}>{heading()}</h2>
+
       {buttonBack()}
+
       {
         year === 0 ?
           <CardsEvents years={anos} events={events} />
           :
-          // <h3>Aqui será exibido os eventos do ano de {year}</h3>
           <Events year={year} events={events} />
       }
+
     </section>
   );
 }
