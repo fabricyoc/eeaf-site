@@ -1,8 +1,6 @@
 import styles from './EventFiles.module.css';
 
-function EventFiles({ files, year }) {
-
-  const arquivosDoAno = files.find(f => f.event_year === Number(year));
+function EventFiles({ files }) {
 
   return (
     <div className={styles.contentFiles}>
@@ -10,7 +8,7 @@ function EventFiles({ files, year }) {
       <section className={styles.files}>
 
         {
-          arquivosDoAno?.files.map((file, index) => (
+          files.map((file, index) => (
             <a
               key={index}
               href={file.url}
@@ -21,6 +19,7 @@ function EventFiles({ files, year }) {
             </a>
           ))
         }
+
       </section>
     </div>
   );

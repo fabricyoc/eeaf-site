@@ -1,6 +1,8 @@
 .event {
   background-color: var(--blue-200);
   border-radius: 6px;
+  
+  margin-bottom: 1rem;
 }
 
 .event>.title2 {

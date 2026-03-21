@@ -19,6 +19,7 @@
   },
   {
     "event_year": 2024,
+    "event_name": "Novo nome de evento",
     "files": [
       {
         "title": "Teste 01 - 2024",
@@ -36,8 +37,24 @@
   },
   {
     "event_year": 2026,
+    "files": []
+  },
+  {
+    "event_year": 2024,
+    "event_name": "AFeira de Ciências",
     "files": [
-      
+      {
+        "title": "Teste 01 NOOV - 2024",
+        "url": "https://youtube.com"
+      },
+      {
+        "title": "Teste 02 NOOV - 2024",
+        "url": "https://google.com"
+      },
+      {
+        "title": "Teste 03 NOOV - 2024",
+        "url": "https://fb.com"
+      }
     ]
   }
 ]

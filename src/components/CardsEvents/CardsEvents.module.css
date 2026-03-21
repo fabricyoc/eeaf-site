@@ -9,10 +9,11 @@
 }
 
 /* card of only one event */
-.cardsEvents > .cardEvent {
+.cardsEvents>.cardEvent {
   width: 250px;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -28,6 +29,12 @@
 .cardEvent:hover {
   transform: scale(1.05);
   box-shadow: 2px 2px 10px var(--blue-600);
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 @media (max-width: 300px) {
