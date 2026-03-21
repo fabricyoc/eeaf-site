@@ -81,7 +81,7 @@
   border-radius: 4px;
 }
 
-/* MOBILE */
+/* mobile */
 @media (max-width: 768px) {
 
   .header {
@@ -122,7 +122,7 @@
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
   }
 
-  /* 🔥 HOVER NA SIDEBAR */
+  /* hove na sidebar */
   .sidebarOpen a {
     width: 80%;
     text-align: center;

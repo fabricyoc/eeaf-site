@@ -1,4 +1,5 @@
 .event {
+  width: 100%;
   background-color: var(--blue-200);
   border-radius: 6px;
   

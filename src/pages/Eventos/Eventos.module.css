@@ -1,31 +1,35 @@
-.eventos{
+.eventos {
   color: var(--blue-500);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.eventos > .title2 {
+.eventos>.title2 {
   text-align: center;
   padding-block: 1.5rem 1rem;
 }
 
-.eventos > .buttonBack{
+.eventos>.buttonBack {
   width: 200px;
   padding: 1rem;
-  
-  margin-inline: auto;
+  text-decoration: none;
 
-  background-color: var(--blue-400);
-  color: #f4f4f4;
+  color: var(--blue-50);
   border-radius: 4px;
-  
+  background-color: var(--blue-400);
+
   font-size: 1.125rem;
   font-weight: bold;
 
   transition: all .5s;
-  
-  margin-bottom: 1.5rem;
+
+  margin-bottom: 1rem;
 }
 
-.eventos > .buttonBack:hover{
+.eventos>.buttonBack:hover {
   background-color: var(--blue-300);
   box-shadow: 0 0 5px var(--blue-700);
 }

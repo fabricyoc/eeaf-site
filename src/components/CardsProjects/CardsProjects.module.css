@@ -32,6 +32,10 @@
   padding: 10px;
 }
 
+.cardProject>.conteudoCardProject a {
+  text-underline-offset: 4px;
+}
+
 .descricaoCardProject>a {
   padding-top: 4px;
   animation: underline-running 3s ease infinite;
