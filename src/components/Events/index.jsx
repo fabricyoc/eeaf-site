@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import styles from './Events.module.css';
-import EventVideo from '../EventVideo';
+import EventVideoVimeo from '../EventVideoVimeo';
+import EventVideoInstagram from '../EventVideoInstagram';
 import EventFiles from '../EventFiles';
 
 function Events({ year, events }) {
@@ -15,7 +16,6 @@ function Events({ year, events }) {
     const grouped = {};
 
     events.forEach(item => {
-      // filtra pelo ano
       if (item.event_year !== Number(year)) return;
 
       const key = `${item.event_year}_${item.event_name || 'sem_nome'}`;
@@ -29,7 +29,6 @@ function Events({ year, events }) {
         };
       }
 
-      // adiciona apenas se tiver conteúdo
       if (item.files?.length) {
         grouped[key].files.push(...item.files);
       }
@@ -39,14 +38,12 @@ function Events({ year, events }) {
       }
     });
 
-    // remove eventos vazios
     return Object.values(grouped).filter(event =>
       event.files.length > 0 || event.videos.length > 0
     );
 
   }, [events, year]);
 
-  // mensagem quando não há eventos
   if (!eventosFiltrados.length) {
     return (
       <p className={styles.empty}>
@@ -60,6 +57,10 @@ function Events({ year, events }) {
       {
         eventosFiltrados.map((event, index) => {
           const isOpen = openIndex === index;
+
+          // separação inteligente
+          const hasVimeo = event.videos?.some(v => !v.url.includes("instagram.com"));
+          const hasInstagram = event.videos?.some(v => v.url.includes("instagram.com"));
 
           return (
             <section key={index} className={styles.event}>
@@ -75,9 +76,9 @@ function Events({ year, events }) {
                   viewBox="0 0 24 24"
                 >
                   {isOpen ? (
-                    <path d="M7 14l5-5 5 5" /> // seta cima
+                    <path d="M7 14l5-5 5 5" />
                   ) : (
-                    <path d="M7 10l5 5 5-5" /> // seta baixo
+                    <path d="M7 10l5 5 5-5" />
                   )}
                 </svg>
               </h2>
@@ -90,9 +91,14 @@ function Events({ year, events }) {
                     <EventFiles files={event.files} />
                   )}
 
-                  {/* vídeos */}
-                  {event.videos?.length > 0 && (
-                    <EventVideo videos={event.videos} />
+                  {/* vídeos Vimeo */}
+                  {hasVimeo && (
+                    <EventVideoVimeo videos={event.videos} />
+                  )}
+
+                  {/* Instagram */}
+                  {hasInstagram && (
+                    <EventVideoInstagram videos={event.videos} />
                   )}
 
                 </section>

@@ -2,7 +2,7 @@
   width: 100%;
   background-color: var(--blue-200);
   border-radius: 6px;
-  
+
   margin-bottom: 1rem;
 }
 
@@ -37,13 +37,9 @@
 }
 
 .listContent {
-  width: 100%;
-
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .active {
