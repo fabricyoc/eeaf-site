@@ -57,49 +57,51 @@ function Events({ year, events }) {
 
   return (
     <>
-      {eventosFiltrados.map((event, index) => {
-        const isOpen = openIndex === index;
+      {
+        eventosFiltrados.map((event, index) => {
+          const isOpen = openIndex === index;
 
-        return (
-          <section key={index} className={styles.event}>
+          return (
+            <section key={index} className={styles.event}>
 
-            <h2
-              className={styles.title2}
-              onClick={() => toggleStatus(index)}
-            >
-              {event.event_name}
-
-              <svg
-                className={styles.arrow}
-                viewBox="0 0 24 24"
+              <h2
+                className={styles.title2}
+                onClick={() => toggleStatus(index)}
               >
-                {isOpen ? (
-                  <path d="M7 14l5-5 5 5" /> // seta cima
-                ) : (
-                  <path d="M7 10l5 5 5-5" /> // seta baixo
-                )}
-              </svg>
-            </h2>
+                {event.event_name}
 
-            <div className={`${styles.content} ${isOpen ? styles.active : ''}`}>
-              <section className={styles.listContent}>
+                <svg
+                  className={styles.arrow}
+                  viewBox="0 0 24 24"
+                >
+                  {isOpen ? (
+                    <path d="M7 14l5-5 5 5" /> // seta cima
+                  ) : (
+                    <path d="M7 10l5 5 5-5" /> // seta baixo
+                  )}
+                </svg>
+              </h2>
 
-                {/* vídeos */}
-                {event.videos?.length > 0 && (
-                  <EventVideo videos={event.videos} />
-                )}
+              <div className={`${styles.content} ${isOpen ? styles.active : ''}`}>
+                <section className={styles.listContent}>
 
-                {/* arquivos */}
-                {event.files?.length > 0 && (
-                  <EventFiles files={event.files} />
-                )}
+                  {/* arquivos */}
+                  {event.files?.length > 0 && (
+                    <EventFiles files={event.files} />
+                  )}
 
-              </section>
-            </div>
+                  {/* vídeos */}
+                  {event.videos?.length > 0 && (
+                    <EventVideo videos={event.videos} />
+                  )}
 
-          </section>
-        );
-      })}
+                </section>
+              </div>
+
+            </section>
+          );
+        })
+      }
     </>
   );
 }

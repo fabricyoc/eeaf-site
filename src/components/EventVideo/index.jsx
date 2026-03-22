@@ -1,15 +1,43 @@
 import styles from './EventVideo.module.css';
+import { useEffect } from "react";
 
-function EventVideo({ nameVideo }) {
+function EventVideo({ videos }) {
+
+  useEffect(() => {
+    if (window.instgrm) {
+      window.instgrm.Embeds.process();
+    }
+  }, [videos]); // importante!
+
+  const isInstagram = (url) => url.includes("instagram.com");
+
   return (
-    <div className={styles.video}>
-      <h4>{nameVideo}</h4>
-      <iframe
-        src="https://player.vimeo.com/video/1040495493?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-        title="2024 Aula da saudade - Entrada">
-      </iframe>
-    </div>
+    <>
+      {
+        videos.map((video, index) => (
+          <div className={styles.video} key={index}>
+            <h4>{video.title}</h4>
+
+            {
+              isInstagram(video.url) ? (
+                <blockquote
+                  className="instagram-media"
+                  data-instgrm-permalink={video.url}
+                  data-instgrm-version="14"
+                ></blockquote>
+              ) : (
+                <iframe
+                  className={styles.vimeo}
+                  src={video.url}
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                  title={video.title}
+                />
+              )
+            }
+          </div>
+        ))
+      }
+    </>
   );
 }
 

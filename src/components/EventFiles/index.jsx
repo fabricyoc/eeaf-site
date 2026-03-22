@@ -4,7 +4,7 @@ function EventFiles({ files }) {
 
   return (
     <div className={styles.contentFiles}>
-      <h4>Links</h4>
+      <h4>Arquivos</h4>
       <section className={styles.files}>
 
         {
