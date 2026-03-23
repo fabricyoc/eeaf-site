@@ -1,0 +1,134 @@
+.formLogin {
+  background-color: var(--blue-100);
+  padding: 2rem;
+  border-radius: 12px;
+
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* título */
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* campo */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.field label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* 🔥 wrapper do input */
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* ícone esquerdo */
+.icon {
+  position: absolute;
+  left: 10px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* input */
+.inputWrapper input {
+  width: 100%;
+  padding: 0.6rem;
+  padding-left: 2rem;   /* espaço pro ícone */
+  padding-right: 2.5rem; /* espaço pro olho */
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+
+  transition: 0.2s;
+}
+
+/* foco */
+.inputWrapper input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+/* 👁️ olho */
+.eye {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* botão */
+.button {
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+
+  background-color: #007bff;
+  color: #fff;
+
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* link cadastro */
+.register {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.register a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
+
+/* tablets */
+@media (max-width: 768px) {
+  .formLogin {
+    padding: 1.5rem;
+  }
+}
+
+/* celulares */
+@media (max-width: 480px) {
+  .formLogin {
+    padding: 1.2rem;
+    margin: 1rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+}

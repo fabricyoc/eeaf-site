@@ -1,8 +1,14 @@
+import FormLogin from "../../components/FormLogin";
+import styles from './Login.module.css';
+
 function Login() {
   return (
-    <>
-      Em desenvolvimento
-    </>
+      <section className={styles.cabecalhoLogin}>
+        <img src="/logo.png" alt="" />
+        <h2>SIGEF</h2>
+        <p>Sistema de Gestão Escolar e Feiras de Ciências</p>
+      <FormLogin />
+      </section>
   );
 }
 
