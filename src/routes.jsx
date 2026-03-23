@@ -5,6 +5,7 @@ import Arquivos from "./pages/Arquivos";
 import Contatos from "./pages/Contatos";
 import Eventos from "./pages/Eventos";
 import Login from "./pages/Login";
+import Cadastro from "./pages/Cadastro";
 import PageNotFound from "./pages/PageNotFound";
 
 
@@ -20,6 +21,7 @@ function AppRoutes() {
           <Route path="eventos" element={<Eventos />} />
           <Route path="eventos/:year" element={<Eventos />} />
           <Route path="login" element={<Login />} />
+          <Route path="cadastro" element={<Cadastro />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>

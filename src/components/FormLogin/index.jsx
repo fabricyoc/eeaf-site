@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import styles from './FormLogin.module.css';
+import { Link } from "react-router-dom";
 
 function FormLogin() {
   const [showPassword, setShowPassword] = useState(false);
@@ -51,7 +52,7 @@ function FormLogin() {
       </button>
 
       <p className={styles.register}>
-        Não tem conta? <a href="#">Cadastre-se</a>
+        Não tem conta? <Link to="/cadastro">Cadastre-se</Link>
       </p>
     </form>
   );
