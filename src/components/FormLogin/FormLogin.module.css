@@ -19,7 +19,7 @@
 .title {
   text-align: center;
   font-size: 1.5rem;
-  color: #333;
+  color: #444;
 }
 
 /* campo */
@@ -53,8 +53,10 @@
 .inputWrapper input {
   width: 100%;
   padding: 0.6rem;
-  padding-left: 2rem;   /* espaço pro ícone */
-  padding-right: 2.5rem; /* espaço pro olho */
+  padding-left: 2rem;
+  /* espaço pro ícone */
+  padding-right: 2.5rem;
+  /* espaço pro olho */
 
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -64,10 +66,22 @@
 }
 
 /* foco */
+/* muda ícone */
+.inputWrapper:focus-within .icon {
+  color: var(--blue-600);
+}
+
+/* muda input */
 .inputWrapper input:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: var(--blue-600);
   box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+  color: var(--blue-600);
+}
+
+/* muda o label */
+.field:focus-within label {
+  color: var(--blue-600);
 }
 
 /* 👁️ olho */
@@ -105,7 +119,7 @@
 }
 
 .register a {
-  color: #007bff;
+  color: var(--blue-600);
   text-decoration: none;
   font-weight: 500;
 }
