@@ -1,5 +1,39 @@
 [
   {
+    "event_year": 2026,
+    "event_name": "Homenagens",
+    "videos": [
+      {
+        "title": "Dia das mães",
+        "url": "https://www.instagram.com/p/DVnssptgNVJ/"
+      }
+    ]
+  },
+  {
+    "event_year": 2026,
+    "event_name": "Irreversíveis 2026",
+    "videos": [
+      {
+        "title": "Camisa da 3ª série técnica em informática",
+        "url": "https://www.instagram.com/p/DVrKBLzDFjP/"
+      }
+    ]
+  },
+  {
+    "event_year": 2025,
+    "event_name": "Atos da colação de grau",
+    "videos": [
+      {
+        "title": "Formatura",
+        "url": "https://www.instagram.com/p/DSeM4kajHe8/"
+      },
+      {
+        "title": "Aula da Saudade",
+        "url": "https://www.instagram.com/p/DSbfldsEerq/"
+      }
+    ]
+  },
+  {
     "event_year": 2025,
     "event_name": "CIENTAF",
     "files": [
@@ -10,8 +44,8 @@
     ],
     "videos": [
       {
-        "title": "2025 Aula da saudade - Entrada",
-        "url": "https://player.vimeo.com/video/1040495493?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        "title": "Um pouquinho da CIENTAF 2025",
+        "url": "https://www.instagram.com/p/DOiezESEb-K/"
       },
       {
         "title": "Entrevista com o diretor da EEAF",
@@ -20,10 +54,6 @@
       {
         "title": "Abertura CIENTAF",
         "url": "https://www.instagram.com/p/DOfDkVxkbN3/"
-      },
-      {
-        "title": "Convite para CIENTAF",
-        "url": "https://www.instagram.com/p/DOJxNipEdC4/"
       }
     ]
   },
