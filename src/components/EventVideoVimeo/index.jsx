@@ -20,11 +20,10 @@ function EventVideoVimeo({ videos }) {
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
               title={video.title}
             />
-
           </div>
         ))
       }
-    </div>
+    </div >
   );
 }
 

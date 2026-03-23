@@ -1,5 +1,5 @@
-import Slider from 'react-slick';
-import './carousel.css';
+import Slider from "react-slick";
+import "./carousel.css";
 
 function Carousel({ children }) {
   const settings = {
@@ -21,7 +21,7 @@ function Carousel({ children }) {
       </Slider>
     </div>
   );
-
 }
 
 export default Carousel;
+

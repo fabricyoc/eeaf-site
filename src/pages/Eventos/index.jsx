@@ -3,6 +3,7 @@ import CardsEvents from '../../components/CardsEvents';
 import styles from './Eventos.module.css'
 import Events from '../../components/Events';
 import events from './eventos.json';
+import ScrollToTopButton from '../../components/ScrollToTopButton';
 
 function Eventos() {
 
@@ -50,7 +51,11 @@ function Eventos() {
         year === 0 ?
           <CardsEvents years={anos} events={events} />
           :
-          <Events year={year} events={events} />
+          <>
+            <ScrollToTopButton />
+            <Events year={year} events={events} />
+          </>
+
       }
 
     </section>

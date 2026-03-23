@@ -88,17 +88,26 @@ function Events({ year, events }) {
 
                   {/* arquivos */}
                   {event.files?.length > 0 && (
-                    <EventFiles files={event.files} />
+                    <>
+                      <h2 className={styles.subtitle}>Todas as mídias</h2>
+                      <EventFiles files={event.files} />
+                    </>
                   )}
 
                   {/* vídeos Vimeo */}
                   {hasVimeo && (
-                    <EventVideoVimeo videos={event.videos} />
+                    <>
+                      <h2 className={styles.subtitle}>Vídeos</h2>
+                      <EventVideoVimeo videos={event.videos} />
+                    </>
                   )}
 
                   {/* Instagram */}
                   {hasInstagram && (
-                    <EventVideoInstagram videos={event.videos} />
+                    <>
+                      <h2 className={styles.subtitle}>Instagram</h2>
+                      <EventVideoInstagram videos={event.videos} />
+                    </>
                   )}
 
                 </section>

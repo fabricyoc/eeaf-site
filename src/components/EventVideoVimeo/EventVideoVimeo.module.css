@@ -1,21 +1,26 @@
 .videosVimeo {
   /* background-color: red; */
+  text-align: center;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  text-align: center;
+
+  margin: auto;
+  max-width: 100vw;
 }
 
-.videosVimeo .video{
- /* background-color: green; */
- display: flex;
- flex-direction: column;
- gap: 4px;
+/* cada conjunto de subtítulo + vídeo */
+.videosVimeo .video {
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
+/* cada card de vídeo */
 .videosVimeo .vimeo {
   border: none;
   border-radius: 6px;
