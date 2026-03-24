@@ -64,6 +64,51 @@ export function useFormCadastro() {
       return;
     }
 
+    //  VALIDAÇÃO DO NOME
+    if (field === "nome") {
+      if (value.length < 6) {
+        newErrors.nome = "O nome deve ter pelo menos 6 caracteres";
+
+        setErrors(prev => ({
+          ...prev,
+          ...newErrors
+        }));
+
+        // ainda atualiza o valor (boa prática)
+        setFormData(prev => ({
+          ...prev,
+          nome: value
+        }));
+
+        return;
+      }
+    }
+
+    // VALIDAÇÃO DE SENHA
+    if (field === "senha") {
+      const senhaRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z\d]).{8,}$/;
+
+      let error = "";
+
+      if (value.length === 0) {
+        error = "Informe a senha";
+      } else if (!senhaRegex.test(value)) {
+        error = "Senha deve ter 8+ caracteres, letra, número e símbolo";
+      }
+
+      setFormData(prev => ({
+        ...prev,
+        senha: value
+      }));
+
+      setErrors(prev => ({
+        ...prev,
+        senha: error
+      }));
+
+      return;
+    }
+
     // ATUALIZA NORMAL (OUTROS CAMPOS)
     setFormData(prev => ({
       ...prev,
@@ -114,6 +159,7 @@ export function useFormCadastro() {
 
     if (step === 3) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const senhaRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z\d]).{8,}$/;
 
       if (!formData.email) {
         newErrors.email = "Informe o email";
@@ -123,7 +169,10 @@ export function useFormCadastro() {
 
       if (!formData.senha) {
         newErrors.senha = "Informe a senha";
+      } else if (!senhaRegex.test(formData.senha)) {
+        newErrors.senha = "Senha deve ter 8+ caracteres, letra, número e símbolo";
       }
+
 
       if (!formData.confirmarSenha) {
         newErrors.confirmarSenha = "Confirme a senha";
