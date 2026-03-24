@@ -1,6 +1,5 @@
 .cabecalhoCadastro {
   /* background-color: red; */
-  color: var(--blue-500);
 
   display: flex;
   flex-direction: column;
