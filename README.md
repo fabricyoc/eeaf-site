@@ -162,12 +162,6 @@ Projeto desenvolvido por:
 
 ---
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
-
----
-
 ## ❤️ Considerações Finais
 
 Este sistema foi desenvolvido com foco em:
