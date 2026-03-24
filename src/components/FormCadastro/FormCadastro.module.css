@@ -1,36 +1,51 @@
 .formCadastro {
   background: #ffffff;
-  padding: 1.5rem;
+  padding: 1.2rem;
   border-radius: 16px;
 
   width: 100%;
-  max-width: 900px;
+  max-width: 700px;
   margin: 1rem auto;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 8px;
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
+
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .formCadastro:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
+/* TÍTULO */
 .title {
   grid-column: 1 / -1;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #222;
 }
 
+/* PROGRESSO */
+.progress {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* CAMPOS */
 .field {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
 }
 
 .fieldFull {
@@ -38,43 +53,53 @@
 }
 
 .field label {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #666;
 }
 
+/* INPUT WRAPPER */
 .inputWrapper {
   position: relative;
   display: flex;
   align-items: center;
 }
 
+/* ÍCONES */
 .icon {
   position: absolute;
-  left: 12px;
+  left: 10px;
   color: #999;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
+/* INPUT */
 .input {
   width: 100%;
-  padding: 0.7rem 0.9rem;
-  padding-left: 2.4rem;
-  padding-right: 2.4rem;
+  padding: 0.6rem 0.8rem;
+  padding-left: 2.2rem;
+  padding-right: 2.2rem;
 
   border: 1px solid #e0e0e0;
   border-radius: 8px;
 
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   background-color: #fafafa;
 
   transition: all 0.25s ease;
 }
 
+/* SELECT */
+select.input {
+  appearance: none;
+  cursor: pointer;
+}
+
+/* FOCO */
 .input:focus {
   outline: none;
   border-color: #007bff;
   background-color: #fff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.15);
 }
 
 .inputWrapper:focus-within .icon {
@@ -85,21 +110,24 @@
   color: #007bff;
 }
 
+/* PLACEHOLDER */
 .input::placeholder {
   color: #bbb;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
+/* FILE */
 .input[type="file"] {
   cursor: pointer;
 }
 
+/* OLHO SENHA */
 .eye {
   position: absolute;
-  right: 12px;
+  right: 10px;
   cursor: pointer;
   color: #999;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: 0.2s;
 }
 
@@ -107,45 +135,46 @@
   color: #007bff;
 }
 
+/* ERRO */
 .error {
   color: #e63946;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
+/* BOTÃO PRINCIPAL */
 .button {
   grid-column: 1 / -1;
 
-  padding: 0.9rem;
+  padding: 0.7rem;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
 
-  /* background: linear-gradient(135deg, #007bff, #0056b3); */
   background: green;
   color: #fff;
 
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
 
   cursor: pointer;
   transition: 0.3s;
 }
 
-.button:hover, .buttonBack:hover {
+.button:hover {
   transform: scale(1.02);
-  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.25);
 }
 
+/* BOTÃO VOLTAR */
 .buttonBack {
   grid-column: 1 / -1;
 
-  padding: 0.9rem;
-  border: none;
-  border-radius: 10px;
+  padding: 0.7rem;
+  border-radius: 8px;
 
   background: linear-gradient(135deg, #007bff, #0056b3);
   color: #fff;
 
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
 
   text-align: center;
@@ -155,25 +184,70 @@
   transition: 0.3s;
 }
 
+.buttonBack:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.25);
+}
+
+/* BOTÃO DESABILITADO */
 .button:disabled {
   background: #bbb;
   cursor: not-allowed;
   box-shadow: none;
 }
 
+/* NAVEGAÇÃO ENTRE ETAPAS */
+.navigation {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.navigation button {
+  flex: 1;
+
+  padding: 0.7rem;
+  border: none;
+  border-radius: 8px;
+
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navigation button:first-child {
+  background: #e63946;
+  color: #f4f4f4;
+}
+
+.navigation button:last-child {
+  background: #007bff;
+  color: #fff;
+}
+
+.navigation button.cadastrar {
+  background-color: green;
+}
+
+.navigation button:hover {
+  transform: scale(1.02);
+}
+
+/* RESPONSIVO */
 @media (max-width: 768px) {
   .formCadastro {
     grid-template-columns: 1fr;
+    max-width: 95%;
   }
 }
 
 @media (max-width: 480px) {
   .formCadastro {
-    padding: 1.5rem;
-    margin: 1rem;
+    padding: 1rem;
   }
 
   .title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }

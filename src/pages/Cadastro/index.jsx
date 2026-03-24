@@ -5,8 +5,8 @@ function Login() {
   return (
     <section className={styles.cabecalhoCadastro}>
       <img src="/sigef/sigef.png" alt="" />
-      <h2>SIGEF</h2>
-      <p>Sistema de Gestão Escolar e Feiras de Ciências</p>
+      <h2 className={styles.sigla}>SIGEF</h2>
+      <p className={styles.subtitle}>Sistema de Gestão Escolar e Feiras de Ciências</p>
       <FormCadastro />
     </section>
   );

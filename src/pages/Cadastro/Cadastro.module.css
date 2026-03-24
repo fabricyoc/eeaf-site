@@ -6,7 +6,10 @@
   justify-content: center;
   align-items: center;
 
-  margin-top: 9rem;
+}
+
+.cabecalhoCadastro .sigla, .subtitle{
+  color:  var(--blue-500);
 }
 
 .cabecalhoCadastro img {
