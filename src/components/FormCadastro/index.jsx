@@ -31,7 +31,10 @@ function FormCadastro() {
   ];
 
   return (
-    <form className={styles.formCadastro} onSubmit={handleSubmit}>
+    <form
+      className={styles.formCadastro}
+      onSubmit={handleSubmit}
+    >
       <h3 className={styles.title}>Cadastro</h3>
       <div className={styles.progress}>Etapa {step} de 4</div>
 
@@ -49,7 +52,11 @@ function FormCadastro() {
             Próxima etapa
           </button>
         ) : (
-          <button type="submit" className={styles.cadastrar}>
+          <button
+            type="button"
+            className={styles.cadastrar}
+            onClick={handleSubmit}
+          >
             Cadastrar
           </button>
         )}

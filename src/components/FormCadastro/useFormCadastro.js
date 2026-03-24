@@ -23,12 +23,12 @@ export function useFormCadastro() {
   const handleChange = (field, value) => {
     let newErrors = {};
 
-    // 🔥 DATA DE NASCIMENTO
+    // DATA DE NASCIMENTO
     if (field === "dataNascimento") {
       const hoje = new Date();
       const nasc = new Date(value);
 
-      // ❌ BLOQUEIA DATA FUTURA
+      // BLOQUEIA DATA FUTURA
       if (nasc > hoje) {
         newErrors.dataNascimento = "Data não pode ser futura";
 
@@ -37,10 +37,10 @@ export function useFormCadastro() {
           ...newErrors
         }));
 
-        return; // 🔥 PARA EXECUÇÃO
+        return; // PARA EXECUÇÃO
       }
 
-      // ✅ CALCULA IDADE
+      // CALCULA IDADE
       let idade = hoje.getFullYear() - nasc.getFullYear();
       const mes = hoje.getMonth() - nasc.getMonth();
 
@@ -151,20 +151,18 @@ export function useFormCadastro() {
     return Object.keys(newErrors).length === 0;
   };
 
-  // const nextStep = () => validateStep() && setStep(s => s + 1);
   const nextStep = () => {
     const isValid = validateStep();
 
     if (isValid) {
-      setErrors({}); // 🔥 limpa erros da etapa anterior
+      setErrors({}); // limpa erros da etapa anterior
       setStep((prev) => prev + 1);
     }
   };
 
 
-  // const prevStep = () => setStep(s => s - 1);
   const prevStep = () => {
-    setErrors({}); // 🔥 limpa erros ao voltar
+    setErrors({}); // limpa erros ao voltar
     setStep((prev) => prev - 1);
   };
 
@@ -175,7 +173,7 @@ export function useFormCadastro() {
 
     console.log("Dados enviados:", formData);
 
-    alert("Cadastro realizado com sucesso!");
+    alert("Cadastro realizado com sucesso! (FAKE!!!)");
   };
 
   return {
